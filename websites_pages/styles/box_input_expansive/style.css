@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #297eff;
+}
+div.search
+{
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  transition: 0.5s;
+  background: #fff;
+  position: relative;
+  border-radius: 60px;
+  box-shadow: 0 0 0 5px #2573ef;
+}
+div.search.active
+{
+  width: 360px;
+}
+div.search span.clear
+{
+  position: relative;
+}
+div.search.active span.clear
+{
+  position: absolute;
+}
+
+/* Estilizando o icone do campo de busca */
+div.search div.icon
+{
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.search div.icon::before
+{
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #287dfc;
+  transform: translate( -4px, -4px ) rotate( 315deg );
+}
+div.search div.icon::after
+{
+  content: '';
+  width: 3px;
+  height: 12px;
+  background: #287dfc;
+  position: absolute;
+  transform: translate( 6px, 6px ) rotate( 315deg );
+}
+
+/* Estilizando o campo de busca */
+div.search div.input
+{
+  left: 60px;
+  width: 300px;
+  height: 60px;
+  position: relative;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.search div.input input
+{
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 10px 0px;
+  position: absolute;
+}
+
+/* Estilizando o icone de fechar */
+div.search span.clear
+{
+  top: 50%;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  /* position: absolute; */
+  transform: translateY( -50% );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.search span.clear::before
+{
+  content: '';
+  width: 1px;
+  height: 15px;
+  background: #999;
+  position: absolute;
+  transform: rotate( 45deg );
+}
+div.search span.clear::after
+{
+  content: '';
+  width: 1px;
+  height: 15px;
+  background: #999;
+  position: absolute;
+  transform: rotate( 315deg );
+}
